@@ -12,15 +12,22 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded navbar-custom" aria-label="Thirteenth navbar example">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-body-tertiary rounded navbar-custom" aria-label="Thirteenth navbar example">
+      <div class="container-fluid px-5 ">
+        <!-- Logo sempre visível -->
+        <a class="navbar-brand d-flex" href="#">
+          <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="250" class="logo-img">
+        </a>
+    
+        <!-- Botão Toggle (à direita em dispositivos móveis) -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-          <a class="navbar-brand col-lg-3 me-0" href="#">Centered nav</a>
-          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+    
+        <!-- Conteúdo colapsável -->
+        <div class="collapse navbar-collapse" id="navbarsExample11">
+          <!-- Menu centralizado -->
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Início</a>
             </li>
@@ -35,16 +42,21 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Metas</a></li>
                 <li><a class="dropdown-item" href="#">Recomendações</a></li>
-                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
               </ul>
             </li>
           </ul>
-          <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-            <button class="btn btn-primary btn-login">Login</button>
+    
+          <!-- Botão Login na extrema direita -->
+          <div class="d-flex">
+            <button class="btn btn-primary btn-login ms-auto">Login</button>
           </div>
         </div>
       </div>
     </nav>
+    
+    
+
+
   </header>
 
 

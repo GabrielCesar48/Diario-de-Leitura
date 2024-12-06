@@ -1,87 +1,140 @@
-/* Navbar personalizada */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Reset CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Fim Reset CSS */
+
+
+/* Estilos personalizados */
+body {
+  background-color: #9b2727;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
+
 .navbar-custom {
-    background-color: #f9f7f7; /* Fundo claro */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand-custom {
-    font-size: 1.5rem;
-    color: #f76c6c;
-    font-weight: bold;
-  }
-  
-  .navbar-brand-custom:hover {
-    color: #f34a4a;
-  }
-  
-  .nav-link-custom {
-    color: #505050;
-    font-size: 1rem;
-  }
-  
-  .nav-link-custom:hover {
-    color: #f76c6c;
-  }
-  
-  .btn-login-custom {
-    background-color: #f76c6c;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    padding: 8px 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-login-custom:hover {
-    background-color: #f34a4a;
-  }
-  
-  /* Container do formulário */
-  .container-input-livro {
-    max-width: 600px;
-    background-color: #ffffff;
-    border: 2px solid #f5a623;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .container-input-livro h1 {
-    font-size: 2rem;
-    color: #f76c6c;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Inputs personalizados */
-  .form-control-custom {
-    border: 1px solid #f5a623;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #fffcf2;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  Botão do formulário
-  .button-style {
-    background-color: #330505;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button-style:hover {
-    background-color: #f34a4a;
-  }
-  
-  /* Feedback de erro */
-  .invalid-feedback-custom {
-    font-size: 0.9rem;
-    color: #d9534f;
-  }
-  
+  background-color:#802a2a;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-custom .nav-link {
+  color: #0100a8;
+  margin: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ff8ae3;
+}
+
+.btn-login {
+  background-color: #0100a8;
+  color: white;
+  border: none;
+}
+
+.btn-login:hover {
+  background-color: #03cbcc;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.text-heading {
+  color: #ff8b49;
+  font-weight: bold;
+}
+
+.btn-add-book {
+  background-color: #ff45dc;
+  color: white;
+  border: none;
+}
+
+.btn-add-book:hover {
+  background-color: #d038b5;
+}
+
+.form-control:focus {
+  border-color: #03cbcc;
+  box-shadow: 0 0 5px #03cbcc;
+}
+
+/* Logo sem achatamento */
+.logo-img {
+  height: auto;
+  max-height: 100px; /* Ajuste conforme necessário */
+}
+
+/* Botão Toggle à direita em dispositivos móveis */
+.navbar-toggler {
+  position: relative;
+  margin-left: auto;
+}
+
+/* Centralização do menu */
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-nav.mx-auto {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Botão de login alinhado corretamente */
+.btn-login {
+  margin-left: auto;
+}
