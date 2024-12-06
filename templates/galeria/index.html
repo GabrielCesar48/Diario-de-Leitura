@@ -12,22 +12,18 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-md bg-body-tertiary rounded navbar-custom" aria-label="Thirteenth navbar example">
-      <div class="container-fluid px-5 ">
-        <!-- Logo sempre visível -->
-        <a class="navbar-brand d-flex" href="#">
-          <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="250" class="logo-img">
+    <nav class="navbar navbar-expand-md bg-body-tertiary navbar-custom" aria-label="Thirteenth navbar example">
+      <div class="container-lg">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="10" class="logo-img">
         </a>
-    
-        <!-- Botão Toggle (à direita em dispositivos móveis) -->
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-    
-        <!-- Conteúdo colapsável -->
         <div class="collapse navbar-collapse" id="navbarsExample11">
-          <!-- Menu centralizado -->
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav justify-content-center">  <!-- Adicionou justify-content-center -->
+            <!-- Itens do menu... -->
+             <!-- Itens do menu... -->
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Início</a>
             </li>
@@ -45,10 +41,8 @@
               </ul>
             </li>
           </ul>
-    
-          <!-- Botão Login na extrema direita -->
           <div class="d-flex">
-            <button class="btn btn-primary btn-login ms-auto">Login</button>
+            <button class="btn btn-primary btn-login px-4">Login</button>
           </div>
         </div>
       </div>

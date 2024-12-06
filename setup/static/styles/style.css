@@ -58,17 +58,18 @@ body {
   color: #444;
 }
 
-.navbar-custom {
+/* .navbar-custom {
   background-color:#802a2a;
   padding: 0px;
   margin: 0px;
-}
+} */
 
 .navbar-custom .nav-link {
   color: #0100a8;
-  margin: 0 10px;
+  margin: 0 15px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .navbar-custom .nav-link:hover {
@@ -113,30 +114,28 @@ body {
   box-shadow: 0 0 5px #03cbcc;
 }
 
-/* Logo sem achatamento */
+/* Configurar a logo */
 .logo-img {
+  max-height: 80px; /* Impede que a logo ultrapasse o container */
   height: auto;
-  max-height: 100px; /* Ajuste conforme necessário */
+  width: auto; /* Garante proporção correta */
 }
 
-/* Botão Toggle à direita em dispositivos móveis */
-.navbar-toggler {
-  position: relative;
-  margin-left: auto;
-}
-
-/* Centralização do menu */
+/* Ajustar o restante do menu */
 .navbar-nav {
-  text-align: center;
-
-}
-
-.navbar-nav.mx-auto {
   flex-grow: 1;
   justify-content: center;
 }
 
-/* Botão de login alinhado corretamente */
+
+.navbar-brand {
+  z-index: 10; /* Garante que a logo fique acima de outros elementos */
+}
+
+.navbar-nav {
+  z-index: 5; /* O menu ficará abaixo da logo */
+}
+
 .btn-login {
-  margin-left: auto;
+  z-index: 10; /* Garante que o botão login também esteja visível */
 }
