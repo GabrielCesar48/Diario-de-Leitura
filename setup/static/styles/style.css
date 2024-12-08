@@ -52,32 +52,40 @@ table {
 
 /* Estilos personalizados */
 body {
-  background-color: #412323;
+  /* background-color: #412323; */
   font-family: 'Open Sans', sans-serif;
 
   color: #444;
 }
 
-/* .navbar-custom {
+.navbar-custom {
   background-color:#802a2a;
   padding: 0px;
   margin: 0px;
-} */
+}
 
 .navbar-custom .nav-link {
   color: #0100a8;
-  margin: 0 15px;
+  margin: 0 10px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 1.4rem;
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 .navbar-custom .nav-link:hover {
-  color: #ff8ae3;
+  color: #ff45dc;
 }
 
-.btn-login {
+.navbar-custom .nav-link.active {
+  border-radius: 5px;
+  background-color: #ff45dc;
+  color: #ffffff;
+}
+
+.btn-login-custom {
   background-color: #0100a8;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
   color: white;
   border: none;
 }
@@ -85,6 +93,14 @@ body {
 .btn-login:hover {
   background-color: #03cbcc;
 }
+
+.btn-cadastrar-custom {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  color: #0100a8;
+  border: none;
+}
+
 
 .logo-img {
   height: 50px;
@@ -129,6 +145,7 @@ body {
 
 
 .navbar-brand {
+  margin: 0;
   z-index: 10; /* Garante que a logo fique acima de outros elementos */
 }
 
@@ -138,4 +155,14 @@ body {
 
 .btn-login {
   z-index: 10; /* Garante que o botão login também esteja visível */
+}
+
+.container-xl {
+  max-width: 1440px; /* Define a largura maxima do container */
+  padding: 0;
+}
+
+.background-top {
+  background-color: #03cbcc;
+  height: 100px;
 }

@@ -66,12 +66,18 @@ body {
 
 .navbar-custom .nav-link {
   color: #0100a8;
-  margin: 0 10px;
+  margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .navbar-custom .nav-link:hover {
+  color: #ff8ae3;
+}
+
+.navbar-custom .nav-link.active {
+  background-color: #ff8ae3;
   color: #ff8ae3;
 }
 
@@ -115,7 +121,7 @@ body {
 
 /* Configurar a logo */
 .logo-img {
-  max-height: 70px; /* Impede que a logo ultrapasse o container */
+  max-height: 80px; /* Impede que a logo ultrapasse o container */
   height: auto;
   width: auto; /* Garante proporção correta */
 }
@@ -128,6 +134,7 @@ body {
 
 
 .navbar-brand {
+  margin: 0;
   z-index: 10; /* Garante que a logo fique acima de outros elementos */
 }
 
@@ -137,4 +144,9 @@ body {
 
 .btn-login {
   z-index: 10; /* Garante que o botão login também esteja visível */
+}
+
+.container-xl {
+  max-width: 1440px; /* Define a largura maxima do container */
+  padding: 0;
 }

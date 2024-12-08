@@ -12,8 +12,8 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-md bg-body-tertiary navbar-custom" aria-label="Thirteenth navbar example">
-      <div class="container-lg">
+    <!-- <nav class="navbar navbar-expand-md bg-body-tertiary navbar-custom" aria-label="Thirteenth navbar example">
+      <div class="container-xl px-1">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="10" class="logo-img">
         </a>
@@ -21,10 +21,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample11">
-          <ul class="navbar-nav justify-content-center">  <!-- Adicionou justify-content-center -->
+          <ul class="navbar-nav justify-content-center">   Adicionou justify-content-center -->
             <!-- Itens do menu... -->
              <!-- Itens do menu... -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Início</a>
             </li>
             <li class="nav-item">
@@ -46,9 +46,43 @@
           </div>
         </div>
       </div>
+    </nav> -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
+      <div class="container-fluid px-lg-5 px-md-3 px-sm-1 mx-lg-5 mx-md-3 mx-sm-1">
+        <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="10" class="logo-img">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Livros Lidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Estatísticas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Saiba Mais</a>
+            </li>
+          </ul>
+          <div class="d-flex position-relative">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-primary me-md-2 btn-login-custom" type="button">Entrar</button>
+              <button class="btn btn-link btn-cadastrar-custom" type="button">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
-    
-    
+
+    <div class="background-top">
+      <img src="{% static 'assets/img/background.png' %}" alt="Cover" width="100%" class="cover-img">
+    </div>
+
 
 
   </header>
