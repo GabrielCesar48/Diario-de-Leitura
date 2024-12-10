@@ -49,74 +49,100 @@ table {
 }
 /* Fim Reset CSS */
 
+/* Import Fontes Funny */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'Funny';
+  src: url('../assets/fonts/Funny.ttf') format('truetype'),;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 /* Estilos personalizados */
 body {
-  background-color: #412323;
+  background-color: #EFEFEF;
   font-family: 'Open Sans', sans-serif;
-
   color: #444;
 }
 
 .navbar-custom {
   background-color:#802a2a;
-  padding: 0px;
+  padding: 15px;
   margin: 0px;
+  box-shadow: 1px 1px 20px #747373;
+  z-index: 10; /* Eleva o nível da navbar */
+  position: relative; /* Necessário para z-index funcionar */
 }
 
 .navbar-custom .nav-link {
   color: #0100a8;
-  margin: 0px;
+  margin: 0 10px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 .navbar-custom .nav-link:hover {
-  color: #ff8ae3;
+  color: #ff45dc;
 }
 
 .navbar-custom .nav-link.active {
-  background-color: #ff8ae3;
-  color: #ff8ae3;
+  border-radius: 5px;
+  background-color: #ff45dc;
+  color: #ffffff;
 }
 
-.btn-login {
+.btn-login-custom {
   background-color: #0100a8;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
   color: white;
   border: none;
 }
 
-.btn-login:hover {
+.btn-login-custom:hover {
   background-color: #03cbcc;
 }
 
-.logo-img {
-  height: 50px;
-}
-
-.container {
-  max-width: 600px;
-}
-
-.text-heading {
-  color: #ff8b49;
-  font-weight: bold;
-}
-
-.btn-add-book {
-  background-color: #ff45dc;
-  color: white;
+.btn-cadastrar-custom {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  color: #0100a8;
   border: none;
 }
 
-.btn-add-book:hover {
-  background-color: #d038b5;
+.container {
+  max-width: 800px;
+}
+
+.text-heading {
+  font-family: 'funny';
+  font-size: 58px;
+  color: #0100a8;
+  letter-spacing: 5px; /* Espaçamento entre letras */
+  
+}
+
+.form-control {
+border-color: #ff45dc;
+font-family: 'Open Sans', sans-serif;
+font-size: 14px; /* Tamanho da fonte */
+color: #c4c4c4;
 }
 
 .form-control:focus {
   border-color: #03cbcc;
   box-shadow: 0 0 5px #03cbcc;
+}
+
+/* Estilo para o placeholder */
+input::placeholder {
+  font-family: 'Open Sans', sans-serif;/* Fonte desejada */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #c4c4c4; /* Cor do texto do placeholder */
 }
 
 /* Configurar a logo */
@@ -131,7 +157,6 @@ body {
   flex-grow: 1;
   justify-content: center;
 }
-
 
 .navbar-brand {
   margin: 0;
@@ -149,4 +174,153 @@ body {
 .container-xl {
   max-width: 1440px; /* Define a largura maxima do container */
   padding: 0;
+}
+
+/* Estilo da div principal */
+.background-top {
+  background-color: #03cbcc;
+  height: 100px;
+  overflow: hidden; /* Garante que nada extrapole */
+  clip-path: inset(0 0 0 0); /* Limita a área visível */
+}
+
+.cover-img {
+  position: absolute; /* Para animar dentro da div */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Para permitir movimento vertical maior */
+  object-fit: cover; /* Garante preenchimento */
+  animation: moveUpDown 150s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsivo - Ajuste de altura */
+/* Para tablets */
+@media (max-width: 768px) { 
+  .background-top {
+    height: 85px;
+  }
+  .text-heading {
+    font-size: 50px;
+  }
+}
+/* Para celulares */
+@media (max-width: 576px) { 
+  .background-top {
+    height: 78px; 
+  }
+  .text-heading {
+    font-size: 40px; 
+  }
+
+}
+
+/* Estilo do formulário */ 
+
+.form-custom  {
+  font-family: 'open sans', sans-serif;
+  font-weight: bolder;
+  color: #ff45dc;
+  margin: 0 auto;
+}
+
+.btn-add-book {
+  background-color: #0100a8;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  color: white;
+  border: none;
+}
+
+.btn-add-book:hover {
+  background-color: #03cbcc;
+  color: white;
+}
+
+/* Garante que o HTML e BODY ocupem toda a altura da janela */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Layout Flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Força o conteúdo principal a ocupar o espaço restante */
+main {
+  flex: 1;
+  min-height: 0; /* Previne que o conteúdo adicione rolagem desnecessária */
+}
+
+/* Previne margens externas no footer que adicionam rolagem extra */
+footer {
+  margin-top: auto;
+}
+
+/* Configurar a logo reduzida */
+.logo-reduzida-img {
+  max-height: 80px; /* Impede que a logo ultrapasse o container */
+  height: auto;
+  width: auto; /* Garante proporção correta */
+}
+
+.custom-footer {
+  color: #0100a8; /* Altere para a cor desejada */
+}
+
+.custom-footer:hover {
+  color: #ff45dc; /* Altere para a cor desejada */
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #f8f9fa;
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+footer strong {
+  font-weight: 600;
+}
+
+.logo-reduzida-img {
+  max-width: 80px; /* Tamanho reduzido no mobile */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column; /* Empilha os itens no mobile */
+      align-items: center;
+  }
+  footer div {
+      margin-bottom: 10px; /* Espaçamento entre seções no mobile */
+  }
+  .custom-footer i {
+      font-size: 1.2rem; /* Ícones menores no mobile */
+  }
+  .logo-reduzida-img {
+      margin-top: 10px; /* Espaçamento da logo em relação aos textos */
+  }
 }
