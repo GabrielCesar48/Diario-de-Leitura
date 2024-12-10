@@ -199,11 +199,20 @@ input::placeholder {
   width: 100%;
   height: 100%; /* Para permitir movimento vertical maior */
   object-fit: cover; /* Garante preenchimento */
-  animation: moveUpDown 150s ease-in-out infinite;
-}
+  animation: moveUpDown 150s ease-in-out infinite;}
 
 
 .cover-img {
+  position: absolute; /* Para animar dentro da div */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Para permitir movimento vertical maior */
+  object-fit: cover; /* Garante preenchimento */
+  animation: moveUpDown 150s ease-in-out infinite;
+}
+
+.cover-img-botton {
   position: absolute; /* Para animar dentro da div */
   top: 0;
   left: 0;
