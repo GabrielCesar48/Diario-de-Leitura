@@ -1,40 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+  <!-- Metadados básicos -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título da página -->
   <title>Adicionar Livro Lido</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Ícones e fontes -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Estilos do Bootstrap e arquivo CSS customizado -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
   <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 </head>
+
 <body>
-
+  <!-- Início do cabeçalho -->
   <header class="mb-3">
-
+  <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
       <div class="container-fluid px-lg-5 px-md-3 px-sm-1 mx-lg-5 mx-md-3 mx-sm-1">
-        <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="10" class="logo-img">
+        <!-- Logo -->
+         <a href="">
+          <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="10" class="logo-img">
+         </a>
+        
+
+        <!-- Botão para expandir o menu no modo responsivo -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Links do menu -->
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Livros Lidos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Estatísticas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Saiba Mais</a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Livros Lidos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Estatísticas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Saiba Mais</a></li>
           </ul>
+
+          <!-- Botões de login e cadastro -->
           <div class="d-flex position-relative">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button class="btn btn-primary me-md-2 btn-login-custom" type="button">Login</button>
@@ -45,26 +56,35 @@
       </div>
     </nav>
 
+     <!-- Imagem de fundo no topo -->
     <div class="background-top">
       <img src="{% static 'assets/img/background.png' %}" alt="Imagem de fundo" class="cover-img">
     </div>
-
   </header>
 
+  <!-- Conteúdo principal -->
   <main>
     <div class="container rounded px-5">
-      <h1 class="text-center text-heading mb-sm-4 mb-md-4 mb-lg-5">Diário de Leitura da Júlia</h1>
+      <!-- Título da página -->
+      <h1 class="text-center text-heading mb-sm-2 mb-md-3 mb-lg-5">Diário de Leitura da Júlia</h1>
+
+      <!-- Formulário para adicionar livro -->
       <form class="form-custom">
         <div class="row">
+          <!-- Campo de data de início -->
           <div class="col-md-6 mb-3 mt-3">
             <label for="startDate" class="form-label">Data de Início</label>
             <input type="date" class="form-control rounded-3 custom-date" id="startDate">
           </div>
+
+          <!-- Campo de data de fim -->
           <div class="mb-3 col-md-6 mt-sm-0 mt-md-3 mt-lg-3">
             <label for="endDate" class="form-label">Data de Fim</label>
             <input type="date" class="form-control rounded-3 custom-date" id="endDate" >
           </div>
         </div>
+
+        <!-- Campo de título, autor e número de páginas -->
         <div class="mb-3">
           <label for="title" class="form-label">Título do Livro</label>
           <input type="text" class="form-control rounded-3" id="title" placeholder="Digite o título do livro">
@@ -73,43 +93,56 @@
           <label for="author" class="form-label">Autor</label>
           <input type="text" class="form-control rounded-3" id="author" placeholder="Digite o autor do livro">
         </div>
-        <div class="mb-4">
+        <div class="mb-3">
           <label for="pages" class="form-label">Número de Páginas</label>
           <input type="number" class="form-control rounded-3" id="pages" placeholder="Digite o número de páginas do livro">
         </div>
+
+        <!-- Botão de adicionar livro -->
         <button type="submit" class="btn btn-add-book w-100 mt-3">Adicionar Livro</button>
       </form>
     </div>
   </main>
 
-  <section class="mt-2">
+  <!-- Arte antes de rodapé -->
+  <section class="mt-3">
+
+    <div class="pink-colored-bar"></div>
+
+    <div class="yellow-colored-bar"></div>
+
+
     <div class="background-botton">
       <img src="{% static 'assets/img/background.png' %}" alt="Imagem de fundo" class="cover-img-botton">
     </div>
   </section>
   
-  <div class="container-fluid text-bg-light">
+
+  <!-- Rodapé -->
+  <div class="container-fluid text-bg-light footer-custom">
     <footer class="d-flex flex-wrap justify-content-between align-items-center border-top pt-3 px-lg-5 px-md-3 px-sm-1 mx-lg-5 mx-md-3 mx-sm-1">
       <div class="col-md-6 d-flex align-items-center">
-
         <div class="container">
-          <p class="mb-2 custom-footer">              
-              <a href="https://www.linkedin.com/in/gabriel-pereira" target="_blank" class="text-decoration-none custom-footer">
+
+          <!-- Informações de contato e créditos -->
+          <p class="mb-2">              
+              <a href="https://www.linkedin.com/in/gabriel-pereira" target="_blank" class="text-decoration-none custom-links">
                   <i class="bi bi-linkedin"></i>                  
                   Desenvolvido por <strong>Gabriel Pereira</strong>
               </a>
               
           </p>
-          <p class="mb-0 custom-footer">
-              <a href="https://www.linkedin.com/in/giovanna-barbosa" target="_blank" class="text-decoration-none custom-footer">
+          <p class="mb-0">
+              <a href="https://www.linkedin.com/in/giovanna-barbosa" target="_blank" class="text-decoration-none custom-links">
                   <i class="bi bi-linkedin"></i>
                   Design UX/UI por <strong>Giovanna Barbosa</strong>
               </a>
           </p>
           <p class="mt-2 custom-footer">&copy; 2025</p>
-      </div>
+        </div>
       </div>
 
+      <!-- Logo reduzida -->
       <div class="col-md-4 justify-content-end list-unstyled d-flex">
         <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
           <img src="{% static 'assets/img/logo-reduzida.png' %}" alt="Logo" width="10" class="logo-reduzida-img">
@@ -117,17 +150,10 @@
       </div>      
     </footer>
 
-
-
-
-
-
-
-
+   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
 

@@ -17,70 +17,87 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
 /* Fim Reset CSS */
 
-/* Import Fontes Funny */
+/* Import Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @font-face {
   font-family: 'Funny';
-  src: url('../assets/fonts/Funny.ttf') format('truetype'),;
+  src: url('../assets/fonts/Funny.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 /* Estilos personalizados */
 body {
   background-color: #EFEFEF;
   font-family: 'Open Sans', sans-serif;
   color: #444;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .navbar-custom {
-  background-color:#802a2a;
+  background-color: #802a2a;
   padding: 15px;
-  margin: 0px;
+  margin: 0;
   box-shadow: 1px 1px 20px #747373;
-  z-index: 10; /* Eleva o nível da navbar */
-  position: relative; /* Necessário para z-index funcionar */
+  z-index: 10;
+  position: relative;
 }
 
 .navbar-custom .nav-link {
   color: #0100a8;
   margin: 0 10px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   font-size: 1.2rem;
 }
@@ -97,7 +114,6 @@ body {
 
 .btn-login-custom {
   background-color: #0100a8;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   color: white;
   border: none;
@@ -108,29 +124,39 @@ body {
 }
 
 .btn-cadastrar-custom {
-  font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   color: #0100a8;
   border: none;
+}
+
+.btn-cadastrar-custom:hover {
+  color: #03cbcc;
 }
 
 .container {
   max-width: 800px;
 }
 
+.container-xl {
+  max-width: 1440px;
+  padding: 0;
+}
+
 .text-heading {
-  font-family: 'funny';
+  font-family: 'Funny';
   font-size: 58px;
   color: #0100a8;
-  letter-spacing: 5px; /* Espaçamento entre letras */
-  
+  letter-spacing: 5px;
+}
+
+.text-heading {
+  font-size: 58px;
 }
 
 .form-control {
-border-color: #ff45dc;
-font-family: 'Open Sans', sans-serif;
-font-size: 14px; /* Tamanho da fonte */
-color: #c4c4c4;
+  border-color: #ff45dc;
+  font-size: 14px;
+  color: #c4c4c4;
 }
 
 .form-control:focus {
@@ -138,136 +164,110 @@ color: #c4c4c4;
   box-shadow: 0 0 5px #03cbcc;
 }
 
-/* Estilo para o placeholder */
 input::placeholder {
-  font-family: 'Open Sans', sans-serif;/* Fonte desejada */
-  font-size: 14px; /* Tamanho da fonte */
-  color: #c4c4c4; /* Cor do texto do placeholder */
+  font-size: 14px;
+  color: #c4c4c4;
 }
 
-/* Configurar a logo */
 .logo-img {
-  max-height: 80px; /* Impede que a logo ultrapasse o container */
+  max-height: 80px;
   height: auto;
-  width: auto; /* Garante proporção correta */
+  width: auto;
 }
 
-/* Ajustar o restante do menu */
+.logo-reduzida-img {
+  max-height: 60px;
+  height: auto;
+  width: auto;
+}
+
 .navbar-nav {
   flex-grow: 1;
   justify-content: center;
+  z-index: 5;
 }
 
 .navbar-brand {
   margin: 0;
-  z-index: 10; /* Garante que a logo fique acima de outros elementos */
+  z-index: 10;
 }
 
-.navbar-nav {
-  z-index: 5; /* O menu ficará abaixo da logo */
-}
-
-.btn-login {
-  z-index: 10; /* Garante que o botão login também esteja visível */
-}
-
-.container-xl {
-  max-width: 1440px; /* Define a largura maxima do container */
-  padding: 0;
-}
-
-/* Estilo da div principal */
-.background-top {
+.background-top, .background-botton {
   background-color: #03cbcc;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.background-top {
   height: 70px;
-  overflow: hidden; /* Garante que nada extrapole */
-  clip-path: inset(0 0 0 0); /* Limita a área visível */
 }
 
 .background-botton {
-  background-color: #03cbcc;
-  height: 80px;
-  overflow: hidden; /* Garante que nada extrapole */
-  clip-path: inset(0 0 0 0); /* Limita aaeda visível */
+  height: 70px;
 }
 
-/* Estilo para a imagem de fundo */
-.background-img {
-  position: absolute; /* Para animar dentro da div */
+.background-img, .cover-img, .cover-img-botton {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Para permitir movimento vertical maior */
-  object-fit: cover; /* Garante preenchimento */
-  animation: moveUpDown 150s ease-in-out infinite;}
-
-
-.cover-img {
-  position: absolute; /* Para animar dentro da div */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Para permitir movimento vertical maior */
-  object-fit: cover; /* Garante preenchimento */
-  animation: moveUpDown 150s ease-in-out infinite;
-}
-
-.cover-img-botton {
-  position: absolute; /* Para animar dentro da div */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Para permitir movimento vertical maior */
-  object-fit: cover; /* Garante preenchimento */
+  height: 100%;
+  object-fit: cover;
   animation: moveUpDown 150s ease-in-out infinite;
 }
 
 @keyframes moveUpDown {
-  0% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-20%);
   }
-  100% {
-    transform: translateY(0);
-  }
 }
 
-
-/* Responsivo - Ajuste de altura */
-/* Para tablets */
-@media (max-width: 768px) { 
+/* Responsivo */
+@media (max-width: 768px) {
   .background-top {
     height: 85px;
   }
+
   .text-heading {
-    font-size: 50px;
+    font-size: 40px;
   }
+
+  html, body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+  }
+
 }
-/* Para celulares */
-@media (max-width: 576px) { 
+
+@media (max-width: 578px) {
   .background-top {
-    height: 78px; 
-  }
-  .text-heading {
-    font-size: 40px; 
+    height: 78px;
   }
 
+  .text-heading {
+    font-size: 30px;
+  }
+
+  html, body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+  }
 }
 
-/* Estilo do formulário */ 
-
-.form-custom  {
-  font-family: 'open sans', sans-serif;
+.form-custom {
   font-weight: bolder;
   color: #ff45dc;
   margin: 0 auto;
+
 }
 
 .btn-add-book {
   background-color: #0100a8;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   color: white;
   border: none;
@@ -278,46 +278,52 @@ input::placeholder {
   color: white;
 }
 
+.footer-custom  {
+  box-shadow: 1px 5px 15px #747373;
+  z-index: 10;
+}
+
+.yellow-colored-bar {
+  height: 1.8rem; /* Altura de 0,5cm é aproximadamente 5px em telas */
+  background-color: #ffd78f; /* Cor da barra */
+  width: 100%; /* Largura total da tela */
+}
+
+.pink-colored-bar {
+  height: 0.8rem; /* Altura de 0,5cm é aproximadamente 5px em telas */
+  background-color: #ff8ae3; /* Cor da barra */
+  width: 100%; /* Largura total da tela */
+}
+
+  .navbar-toggler-icon::before, 
+  .navbar-toggler-icon::after, 
+  .navbar-toggler-icon span {
+    content: '';
+    width: 30px; /* Largura das linhas */
+    height: 3px; /* Espessura das linhas */
+    background-color: #0100a8; /* Cor das linhas */
+    transition: all 0.3s ease;
+  }
+
+.navbar-toggler {
+  border: 4px solid #ff45dc;
+}
+
+.navbar-toggler:hover {
+  border: 4px solid #03cbcc;
+}
+
+.custom-links {
+  color: #0100a8;
+}
+
+.custom-links:hover {
+  color: #03cbcc;
+}
+
 /* Garante que o HTML e BODY ocupem toda a altura da janela */
 html, body {
-  height: 100%;
-  margin: 0;
-}
-
-/* Layout Flexbox */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Força o conteúdo principal a ocupar o espaço restante */
-main {
-  flex: 1;
-  min-height: 0; /* Previne que o conteúdo adicione rolagem desnecessária */
-}
-
-/* Previne margens externas no footer que adicionam rolagem extra */
-footer {
-  margin-top: auto;
-}
-
-/* Configurar a logo reduzida */
-.logo-reduzida-img {
-  max-height: 80px; /* Impede que a logo ultrapasse o container */
   height: auto;
-  width: auto; /* Garante proporção correta */
-}
-
-.custom-footer {
-  color: #0100a8; /* Altere para a cor desejada */
-}
-
-.custom-footer:hover {
-  color: #ff45dc; /* Altere para a cor desejada */
-}
-
-
-.logo-reduzida-img {
-  max-width: 80px; /* Tamanho reduzido no mobile */
-  height: auto;
+    min-height: 100vh;
+    margin: 0;
 }
