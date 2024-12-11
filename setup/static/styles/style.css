@@ -207,21 +207,41 @@ input::placeholder {
 }
 
 .background-img, .cover-img, .cover-img-botton {
-  position: absolute;
+  position:fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Animação para a imagem do topo */
+.cover-img {
   animation: moveUpDown 150s ease-in-out infinite;
 }
 
+/* Animação para a imagem do bottom */
+.cover-img-botton {
+  animation: moveDownUp 150s ease-in-out infinite;
+}
+
+/* Animação que sobe e desce */
 @keyframes moveUpDown {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20%);
+    transform: translateY(-70%);
+  }
+}
+
+/* Animação que desce e sobe */
+@keyframes moveDownUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(70%);
   }
 }
 
