@@ -88,7 +88,6 @@ footer, .pre-footer {
 }
 
 .navbar-custom {
-  background-color: #802a2a;
   padding: 15px;
   margin: 0;
   box-shadow: 1px 1px 20px #747373;
@@ -98,7 +97,7 @@ footer, .pre-footer {
 
 .navbar-custom .nav-link {
   color: #0100a8;
-  margin: 0 10px;
+  margin: 0 0 10 0px;
   font-weight: bolder;
   font-size: 1.2rem;
 }
@@ -111,17 +110,19 @@ footer, .pre-footer {
   border-radius: 5px;
   background-color: #ff45dc;
   color: #ffffff;
+  padding: 10px 20px;
 }
 
 .btn-login-custom {
-  background-color: #0100a8;
   font-weight: bolder;
-  color: white;
-  border: none;
+  border: 2px solid #0100a8;
+  border-radius: 5px;
+  color: #0100a8;
 }
 
 .btn-login-custom:hover {
   background-color: #03cbcc;
+  border: 2px solid #03cbcc;
 }
 
 .btn-cadastrar-custom {
@@ -256,6 +257,20 @@ input::placeholder {
     font-size: 40px;
   }
 
+  .footer-custom {
+    text-align: center;
+  }
+
+  .footer-custom .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-custom .logo-reduzida-img {
+    margin-top: 10px;
+  }
+
   html, body {
     height: auto;
     min-height: 100%;
@@ -299,7 +314,7 @@ input::placeholder {
   color: white;
 }
 
-.footer-custom, .pre-footer  {
+.footer-custom  {
   box-shadow: 1px 5px 15px #747373;
   z-index: 10;
   margin-top: auto;
@@ -352,6 +367,7 @@ html, body {
     margin: 0;
 }
 
-.pre-footer {
-  margin-top: auto;
+.spinner-large {
+  width: 4rem;
+  height: 4rem;
 }

@@ -19,16 +19,18 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'index' %}">Início</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'livros_lidos' %}">Livros Lidos</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'estatisticas' %}">Estatísticas</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'saiba_mais' %}">Saiba Mais</a></li>
+              <li class="nav-item"><a class="nav-link " href="{% url 'livros_lidos' %}">Livros Lidos</a></li>
+              <li class="nav-item"><a class="nav-link " href="{% url 'estatisticas' %}">Estatísticas</a></li>
+              <li class="nav-item"><a class="nav-link " href="{% url 'saiba_mais' %}">Saiba Mais</a></li>
             </ul>
   
             <!-- Botões de login e cadastro -->
             <div class="d-flex position-relative">
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2 btn-login-custom" type="button">Login</button>
-                <button class="btn btn-link btn-cadastrar-custom text-decoration-none" type="button">Cadastrar</button>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end ms-lg-4 ms-sm-0">
+                <a href="{% url 'login' %}">
+                  <button class="btn btn-outline-primary me-md-2 btn-login-custom px-5 ms-lg-5 ms-sm-0" type="button">Login</button>
+                </a>
+                
               </div>
             </div>
           </div>
