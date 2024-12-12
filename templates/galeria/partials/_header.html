@@ -1,0 +1,42 @@
+{% load static %}
+<!-- Início do cabeçalho -->
+<header class="mb-3">
+    <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
+        <div class="container-fluid px-lg-5 px-md-3 px-sm-1 mx-lg-5 mx-md-3 mx-sm-1">
+          <!-- Logo -->
+           <a href="{% url 'index' %}">
+            <img src="{% static 'assets/img/logo-completa.png' %}" alt="Logo" width="10" class="logo-img">
+           </a>
+          
+  
+          <!-- Botão para expandir o menu no modo responsivo -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- Links do menu -->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'index' %}">Início</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'livros_lidos' %}">Livros Lidos</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'estatisticas' %}">Estatísticas</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'saiba_mais' %}">Saiba Mais</a></li>
+            </ul>
+  
+            <!-- Botões de login e cadastro -->
+            <div class="d-flex position-relative">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2 btn-login-custom" type="button">Login</button>
+                <button class="btn btn-link btn-cadastrar-custom text-decoration-none" type="button">Cadastrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+  
+       <!-- Imagem de fundo no topo -->
+      <div class="background-top">
+        <img src="{% static 'assets/img/background.png' %}" alt="Imagem de fundo" class="cover-img">
+      </div>
+    </header>

@@ -82,8 +82,9 @@ main {
   min-height: 0;
 }
 
-footer {
+footer, .pre-footer {
   margin-top: auto;
+
 }
 
 .navbar-custom {
@@ -257,7 +258,7 @@ input::placeholder {
 
   html, body {
     height: auto;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
   }
 
@@ -274,7 +275,7 @@ input::placeholder {
 
   html, body {
     height: auto;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
   }
 }
@@ -298,9 +299,10 @@ input::placeholder {
   color: white;
 }
 
-.footer-custom  {
+.footer-custom, .pre-footer  {
   box-shadow: 1px 5px 15px #747373;
   z-index: 10;
+  margin-top: auto;
 }
 
 .yellow-colored-bar {
@@ -343,7 +345,13 @@ input::placeholder {
 
 /* Garante que o HTML e BODY ocupem toda a altura da janela */
 html, body {
+  display: flex;
+  flex-direction: column;
   height: auto;
     min-height: 100vh;
     margin: 0;
+}
+
+.pre-footer {
+  margin-top: auto;
 }
